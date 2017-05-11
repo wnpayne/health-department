@@ -1,9 +1,9 @@
-name 'removechef'
-maintainer 'The Authors'
-maintainer_email 'you@example.com'
-license 'All Rights Reserved'
-description 'Installs/Configures removechef'
-long_description 'Installs/Configures removechef'
+name 'health-department'
+maintainer 'Wes Payne'
+maintainer_email 'payne.wes@gmail.com'
+license 'MIT License'
+description 'Removes chef-client from node.'
+long_description 'The Health Department is here to shut you down and remove chef from your node.'
 version '0.1.0'
 chef_version '>= 12.1' if respond_to?(:chef_version)
 
@@ -18,3 +18,5 @@ chef_version '>= 12.1' if respond_to?(:chef_version)
 # a Supermarket.
 #
 # source_url 'https://github.com/<insert_org_here>/removechef'
+#
+depends 'chef-client'

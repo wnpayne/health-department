@@ -9,7 +9,7 @@
 # Bundler
 Gemfile.lock
 bin/*
-.bundle/*
+.vendor/*
 
 # test kitchen
 .kitchen/

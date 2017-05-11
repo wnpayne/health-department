@@ -12,7 +12,15 @@ unless os.windows?
   end
 end
 
-# This is an example test, replace it with your own test.
-describe port(80), :skip do
-  it { should_not be_listening }
+describe command('ps -e | grep chef-client') do
+  its(:stdout) { should be_empty }
+end
+
+describe service('chef-client') do
+  it { should_not be_running }
+  it { should_not be_enabled }
+end
+
+describe package('chef') do
+  it { should_not be_installed }
 end
